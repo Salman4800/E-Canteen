@@ -1,3 +1,6 @@
+
+
+
 const express =require('express')
 const app = express()
 const mongoose = require('mongoose')
@@ -34,9 +37,15 @@ app.get("/login",sessionController.login)
 app.get("/signup",sessionController.signup)
 app.post("/saveuser",sessionController.saveuser)
 
-//Role
+// Role urls
+//Role insert
 app.post("/roles",roleController.addrole)
-
+// ROle showAll
+app.get("/roles",roleController.getAllRoles)
+// Delete specific
+app.delete("/roles/:roleId",roleController.deleteRole)
+// Update Specific
+app.put("/roles",roleController.updateRole)
 
 // Server
 app.listen(3000,function(){
