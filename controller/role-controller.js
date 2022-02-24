@@ -8,6 +8,7 @@ module.exports.addrole = function(req,res){
     let role = new roleModel({
         roleName:req.body.roleName
     })
+
     // Save Function For Insert
     role.save(function(err,success){
         if(err){
@@ -18,7 +19,7 @@ module.exports.addrole = function(req,res){
             res.json({msg:"Role Added",status:200,data:success})
         }
     })
-}
+ }
 // ShowAll in Db
 module.exports.getAllRoles = function(req,res){
     // Find for listing

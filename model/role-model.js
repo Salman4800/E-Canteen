@@ -5,7 +5,8 @@ const mongoose = require('mongoose')
 // Schema
 let roleSchema = mongoose.Schema({
     roleName:{
-        type:String
+        type:String,
+     //   unique: false
     }
 }) 
 
